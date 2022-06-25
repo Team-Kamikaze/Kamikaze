@@ -1,6 +1,6 @@
 import React from "react";
 
-function Topbar({ feedfilter }) {
+function TopBar({ feedfilter }) {
   return (
     <div className="hidden sm:inline-flex ">
       <div className="flex flex-row mx-10 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-50 pb-2 ">
@@ -14,4 +14,4 @@ function Topbar({ feedfilter }) {
   );
 }
 
-export default Topbar;
+export default TopBar;

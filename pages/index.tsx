@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Body from '../components/Body'
 import Image from "next/image";
-import Topbar from "../components/Topbar";
+import TopBar from "../components/TopBar";
 
 
 
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       <Header />
       <Body />
 
-      <Topbar feedfilter={feedfilter} />
+      <TopBar feedfilter={feedfilter} />
     </div>
   );
 };
