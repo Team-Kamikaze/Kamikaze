@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Body from "../components/Body";
 import Image from "next/image";
 import TopBar from "../components/TopBar";
+import Sidebar from "../components/Sidebar";
 
 const Home: NextPage = () => {
   const feedfilter = ["React", "NextJS", "CSS", "HTML", "PAPAREACT"];
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/images/KAMIKAZE icon.ico" />
       </Head>
       <Header />
-
+      <Sidebar />
       <TopBar feedfilter={feedfilter} />
       <Body />
     </div>
