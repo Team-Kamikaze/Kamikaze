@@ -6,18 +6,21 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { IoAppsOutline } from "react-icons/io5";
 import { BsBell } from "react-icons/bs";
 import { useRecoilState } from "recoil";
-import {searchValueAtom, sideIsOpenAtom} from '../atoms'
+import { searchValueAtom, sideIsOpenAtom } from "../atoms";
 import { useRouter } from "next/router";
 
-function Header({handleSearch}) {
+function Header({ handleSearch }) {
   const [searchValue, setSearchValue] = useRecoilState(searchValueAtom);
   const [sideIsOpen, setSideIsOpen] = useRecoilState(sideIsOpenAtom);
-  const router = useRouter()
+  const router = useRouter();
   return (
-    <header className="sticky  top-0 z-50 py-2 bg-white shadow-md border-b-2 items-center sm:h-20 flex flex-col space-y-3 sm:space-y-0 px-10 sm:flex-row  text-gray-500 justify-between ">
+    <header className="sticky top-0 z-50 py-2 w-[485px] xs:w-full bg-white shadow-md items-center sm:h-20 flex flex-col space-y-3 sm:space-y-0 px-10 sm:flex-row text-gray-500 justify-between">
       {/* left side */}
       <div className=" flex items-center justify-center  space-x-5">
-        <FiMenu onClick={() => setSideIsOpen(prev => !prev)} className="text-gray-400 text-3xl  cursor-pointer" />
+        <FiMenu
+          onClick={() => setSideIsOpen((prev) => !prev)}
+          className="text-gray-400 text-3xl  cursor-pointer"
+        />
         <img
           src="/images/KAMIKAZE_logo2.png"
           alt="kamikaze-logo"
@@ -35,11 +38,14 @@ function Header({handleSearch}) {
               className="mx-2  w-[200px]   lg:w-[400px]  focus:outline-none placeholder:text-gray-400  text-black "
               placeholder="Search"
               value={searchValue}
-              onChange = {(e) => setSearchValue(e.target.value) }
+              onChange={(e) => setSearchValue(e.target.value)}
             />
           </div>
           <div>
-            <FiSearch onClick = {handleSearch} className=" mx-2 text-2xl cursor-pointer " />
+            <FiSearch
+              onClick={handleSearch}
+              className=" mx-2 text-2xl cursor-pointer "
+            />
           </div>
         </div>
         <MdKeyboardVoice className="hidden md:inline-flex  mx-2 bg-gray-50 rounded-full text-4xl p-1" />
@@ -51,10 +57,7 @@ function Header({handleSearch}) {
           <RiVideoAddLine className=" text-3xl p-1" />
           <IoAppsOutline className=" text-3xl p-1" />
           <BsBell className=" text-3xl p-1" />
-          <div
-            tabindex="0"
-            class="focus:outline-none h-8 w-8 mb-4 lg:mb-0"
-          >
+          <div tabindex="0" class="focus:outline-none h-8 w-8 mb-4 lg:mb-0">
             <img
               src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_3_1.png"
               alt="man avatar"
