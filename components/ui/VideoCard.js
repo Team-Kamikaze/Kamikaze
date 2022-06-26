@@ -22,7 +22,7 @@ function VideoCard({ item }) {
   } = item;
   const timeAgo = new TimeAgo("en-US");
 
-  console.log(item);
+  // console.log(item);
 
   return (
     <div className="cursor-pointer" onClick={() => router.push(`/videos/${videoId}?title=${title}&publishTime=${publishTime}`)}>

@@ -2,24 +2,20 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import VideoCard from "./ui/VideoCard";
 import dummyData from "./ui/dummyData";
+import { useRecoilValue } from "recoil";
+import { searchValueAtom } from "../atoms";
 
-function Body() {
-  const [data, setData] = useState([]);
-
-  //   useEffect(() => {
-  //     fetch(
-  //         `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=weekend&maxResults=10&key=${process.env.NEXT_PUBLIC_API_KEY}`
-  //       )
-  //       .then((res) => res.json()).then(data => setData(data.items));
-  //   }, []);
-  console.log(dummyData);
+function Body({data}) {
+  const searchValue = useRecoilValue(searchValueAtom)
+  console.log(searchValue)
 
   return (
     <div className="bg-[#F9F9F9] border-t-2 p-5 ">
       <div className=" grid grid-cols-1  sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 ">
-        {dummyData.map((item) => (
-          <VideoCard item={item} />
-        ))}
+        {data.length === 0 ? dummyData?.map(item => <VideoCard item={item} />) : data?.map((item) => <VideoCard item={item} />  )  } 
+          
+      
+        
       </div>
     </div>
   );
