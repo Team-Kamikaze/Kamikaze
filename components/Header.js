@@ -6,17 +6,18 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { IoAppsOutline } from "react-icons/io5";
 import { BsBell } from "react-icons/bs";
 import { useRecoilState } from "recoil";
-import {searchValueAtom} from '../atoms'
+import {searchValueAtom, sideIsOpenAtom} from '../atoms'
 import { useRouter } from "next/router";
 
 function Header({handleSearch}) {
   const [searchValue, setSearchValue] = useRecoilState(searchValueAtom);
+  const [sideIsOpen, setSideIsOpen] = useRecoilState(sideIsOpenAtom);
   const router = useRouter()
   return (
     <header className="sticky top-0 z-50 py-2 bg-white shadow-md border-b-2 items-center sm:h-20 flex flex-col space-y-3 sm:space-y-0 px-10 sm:flex-row mt-2 text-gray-500 justify-between ">
       {/* left side */}
       <div className=" flex items-center space-x-5">
-        <FiMenu className="text-gray-400 text-3xl w-20" />
+        <FiMenu onClick={() => setSideIsOpen(prev => !prev)} className="text-gray-400 text-3xl w-20" />
         <img
           src="/images/KAMIKAZE_logo2.png"
           alt="kamikaze-logo"

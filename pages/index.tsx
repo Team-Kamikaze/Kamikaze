@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       <Header handleSearch={handleSearch} />
       <div className="flex">
         <Sidebar />
-        <div>
+        <div className="">
           <TopBar feedfilter={feedfilter} />
           <Body data={data} />
         </div>

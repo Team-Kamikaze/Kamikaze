@@ -12,3 +12,9 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+@layer components {
+  .side_btn{
+    @apply flex  hover:text-white focus:bg-slate-400 focus:text-white hover:bg-slate-400  rounded  items-center  w-full 
+  }
+}

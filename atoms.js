@@ -6,5 +6,5 @@ export const searchValueAtom  = atom({
   });
   export const sideIsOpenAtom= atom({
     key: 'sideIsOpenAtom', 
-    default: false, 
+    default: true, 
   });
