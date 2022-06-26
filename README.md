@@ -1,23 +1,61 @@
-# Next.js + Tailwind CSS Example
+# Team Kamikaze
+ Create Video app
+<p align="center">
+  
+</p>
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<img src="https://github.com/Team-Kamikaze/Kamikaze/blob/main/public/images/KAMIKAZE%20logo.png?raw=true" />
+<p align="center"><repo-desc></p>
 
-## Deploy your own
+<p align="center">
+<a href="https://github.com/Team-Kamikaze/Kamikaze" title="License">
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+</a>
 
-## How to use
+<!-- </p>
+<!-- <p align="center"><img src="https://github.com/Team-Kamikaze/Kamikaze/blob/main/public/images/Kamikaze.JPG?raw=true" alt="<repo-title>"/></p> -->
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+ <a href="https://kamikaze-psi.vercel.app/">
+  <h2 align="center">🌐 Link to  Kamikazewebsite 🌐</h2></a>
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+<p align="center">
+    <a href="https://github.com/Team-Kamikaze/Kamikaze" title="<repo-title>">📂 Repo</a>
+    ·
+    <a href="https://github.com/Team-Kamikaze/Kamikaze/issues" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
+</p>
+
+<a href="https://kamikaze-psi.vercel.app/">
+<img src="https://github.com/Team-Kamikaze/Kamikaze/blob/main/public/images/Kamikaze.JPG?raw=true" alt="Kamikaze"/>
+ </a>
+
+## 🛠️ Installation Steps
+
+Clone the repository
+
+```Bash
+git clone https://github.com/Team-Kamikaze/Kamikaze.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## ❗ Available Commands
+ 'npm install', 
+ 'npm start'
+ 
+## ❗ About App
+   Papa react Kamikaze Video(1 day challenge), 
+
+## 👷 Built with
+  Next JS, Tailwindcss, API(https://developers.google.com/youtube/v3/docs/search/list)
+
+##  👩🏽‍💻👦🏽👦🏽👩🏽‍Authors
+
+**Mohamed Sabry Mohamed, Monique Chetty, Chinfalu Jason LuFa**
+
+- 🌌 [Profile](https://github.com/mohamedsabrie)
+- 🌌 [Profile](https://github.com/MoniqueChetty )
+- 🌌 [Profile](https://github.com/orgs/Team-Kamikaze/people/jasonLuFa)
+
+
+
+
+<
