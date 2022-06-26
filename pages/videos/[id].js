@@ -1,25 +1,84 @@
-import React from "react";
+import React, { useState } from "react";
 import YouTube from "react-youtube";
 import { useRouter } from "next/router";
-import Header from '../../components/Header'
+import Header from "../../components/Header";
+import { BiLike, BiDislike, BiShare, BiCut } from "react-icons/bi";
+import { BsThreeDots, BsSave } from "react-icons/bs";
 
 function YtVideo() {
   const router = useRouter();
+  const [isLiked, setIsLiked] = useState(false);
+  const [isDisLike, setIsDisLike] = useState(false);
   console.log(router.query);
+  const { id, title, publishTime } = router.query;
 
   const opts = {
-    height: "390",
-    width: "640",
+    width: "100%",
+    height: "100%",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 1,
     },
   };
+  const handleLiked = ()=>{
+    setIsLiked(prev => !prev);
+    if(isDisLike == true) setIsDisLike(false)
+  }
+  const handleDisLike =()=>{
+    setIsDisLike(prev => !prev);
+    if(isLiked == true) setIsLiked(false)
+  }
 
   return (
     <div>
-        <Header />
-      <YouTube videoId={router.query.id} opts={opts} />
+      <Header />
+      <div className="bg-[#F9F9F9] border-t-2 p-5 flex items-center justify-center">
+        <div className="mx-10">
+          <div className="w-full  h-[250px] xs:w-[480px] xs:h-[360px] md:h-[390px] md:w-[640px] xl:h-[498px] xl:w-[885px]">
+            <YouTube
+              videoId={id}
+              opts={opts}
+              title={title}
+              className="w-full h-full"
+            />
+          </div>
+          <div className="mt-5  ">
+            <div>
+              <p className=" lg:text-xl font-medium">{title}</p>
+            </div>
+            <div className="flex items-center justify-between mt-2">
+              <div className="hidden md:inline-flex text-gray-500 text-sm mt-1">
+                <span>{new Date(publishTime).toLocaleDateString()}</span>
+              </div>
+              <div className="flex space-x-5 items-center">
+                <div className={`flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer ${isLiked && "text-blue-500"}`} onClick={handleLiked}>
+                  <BiLike className="text-lg md:text-2xl " />
+                  <span>LIKE</span>
+                </div>
+                <div className={`flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer ${isDisLike && "text-red-500"}`} onClick={handleDisLike}>
+                  <BiDislike className="text-lg md:text-2xl" />
+                  <span>DISLIKE</span>
+                </div>
+                <div className="flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer">
+                  <BiShare className="text-lg md:text-2xl" />
+                  <span>SHARE</span>
+                </div>
+                <div className="flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer">
+                  <BiCut className="text-lg md:text-2xl" />
+                  <span>CUT</span>
+                </div>
+                <div className="hidden xs:flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer">
+                  <BsSave className="text-lg md:text-2xl" />
+                  <span>SAVE</span>
+                </div>
+                <div className="hidden xs:flex items-center space-x-2 font-medium text-xs md:text-base cursor-pointer">
+                  <BsThreeDots className="text-lg md:text-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
