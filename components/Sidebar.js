@@ -17,7 +17,7 @@ import { GrHistory } from "react-icons/gr";
 
 const Sidebar = () => {
   return (
-    <div className="bg-slate-100/90  w-64  h-screen  fixed top-21 overflow-auto">
+    <div className="bg-slate-100/90  w-64  h-screen  fixed top-21 overflow-auto  no-scrollbar">
       <div className="mt-6 flex flex-col justify-start items-start  px-4 w-full space-y-3 pb-5 ">
         <button className="flex text-black hover:text-white focus:bg-slate-400 focus:text-white hover:bg-slate-400 text-gray-400 rounded  items-center space-x-6 w-full pl-4">
           <AiFillHome className="text-2xl text-slate-700" />
@@ -90,7 +90,7 @@ const Sidebar = () => {
       <div className="w-full px-4">
         <hr className=" border-gray-100 w-full" />
       </div>
-      <div className="mt-6 flex flex-col justify-start items-start  px-4 w-full space-y-3 pb-5 ">
+      <div className="mt-6 flex flex-col justify-start items-start  px-4 w-full space-y-3  ">
         <h4 className="text-gray-800 font-bold text-lg  pl-4 ">
           MORE FROM YOUTUBE
         </h4>
@@ -106,6 +106,9 @@ const Sidebar = () => {
           <MdOutlineFeedback className="text-2xl text-slate-700" />
           <p className="text-base leading-10  ">Send feedback</p>
         </button>
+      </div>
+      <div className="h-28 flex justify-center text-gray-400">
+        &copy; {new Date().getFullYear()} Kamikaze
       </div>
     </div>
   );
