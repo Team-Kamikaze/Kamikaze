@@ -13,8 +13,13 @@
   scrollbar-width: none; /* Firefox */
 }
 
+@layer base{
+  body{
+    @apply bg-[#F9F9F9]
+  }
+}
 @layer components {
   .side_btn{
-    @apply flex  hover:text-white focus:bg-slate-400 focus:text-white hover:bg-slate-400  rounded  items-center  w-full 
+    @apply flex    focus:bg-slate-400 focus:text-white hover:bg-gray-200  rounded  items-center  w-full transition duration-150 ease-out 
   }
 }

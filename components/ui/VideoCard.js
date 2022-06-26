@@ -25,8 +25,17 @@ function VideoCard({ item }) {
   // console.log(item);
 
   return (
-    <div className="cursor-pointer" onClick={() => router.push(`/videos/${videoId}?title=${title}&publishTime=${publishTime}`)}>
-      <img className="w-full" src={url} />
+    <div
+      className="cursor-pointer"
+      onClick={() =>
+        router.push(
+          `/videos/${videoId}?title=${title}&publishTime=${publishTime}`
+        )
+      }
+    >
+      <div className=" overflow-hidden">
+        <img className="w-full hover:scale-105  transition duration-200 ease-in-out " src={url} />
+      </div>
       <p className="text-sm font-semibold mt-3">{title}</p>
       <div className="font-medium">
         <span className="text-xs text-gray-500">{channelTitle} </span>.

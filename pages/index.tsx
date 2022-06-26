@@ -31,11 +31,11 @@ const Home: NextPage = () => {
       </Head>
       <Header handleSearch={handleSearch} />
       <div className="flex">
-        <div className={` sm:inline ${sideIsOpen ? "display" : "hidden"}`}>
+        <div className={` sm:inline ${sideIsOpen ? "" : "hidden"}`}>
           <Sidebar />
         </div>
         <div className="">
-          <TopBar feedfilter={feedfilter} />
+          {/* <TopBar feedfilter={feedfilter} /> */}
           <Body data={data} />
         </div>
       </div>
