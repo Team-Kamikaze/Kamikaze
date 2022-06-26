@@ -7,12 +7,13 @@ import TopBar from "../components/TopBar";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
 import { useRecoilValue } from "recoil";
-import { searchValueAtom } from "../atoms";
+import { searchValueAtom, sideIsOpenAtom } from "../atoms";
 
 const Home: NextPage = () => {
   const feedfilter = ["React", "NextJS", "CSS", "HTML", "PAPAREACT"];
   const [data, setData] = useState([]);
   const searchValue = useRecoilValue(searchValueAtom);
+  const sideIsOpen = useRecoilValue(sideIsOpenAtom);
 
   const handleSearch = () => {
     fetch(
@@ -30,7 +31,9 @@ const Home: NextPage = () => {
       </Head>
       <Header handleSearch={handleSearch} />
       <div className="flex">
-        <Sidebar />
+        <div className={` sm:inline ${sideIsOpen ? "display" : "hidden"}`}>
+          <Sidebar />
+        </div>
         <div className="">
           <TopBar feedfilter={feedfilter} />
           <Body data={data} />
