@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import { useRouter } from "next/router";
 import Header from "../../components/Header";
 import Sidebar from "../../components/Sidebar";
 import { BiLike, BiDislike, BiShare, BiCut } from "react-icons/bi";
 import { BsThreeDots, BsSave } from "react-icons/bs";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { sideIsOpenAtom } from "../../atoms";
 
 function YtVideo() {
@@ -14,7 +14,7 @@ function YtVideo() {
   const [isDisLike, setIsDisLike] = useState(false);
   console.log(router.query);
   const { id, title, publishTime } = router.query;
-  const sideIsOpen = useRecoilValue(sideIsOpenAtom);
+  const [sideIsOpen, setSideIsOpen] = useRecoilState(sideIsOpenAtom);
 
   const opts = {
     width: "100%",
@@ -32,6 +32,9 @@ function YtVideo() {
     setIsDisLike((prev) => !prev);
     if (isLiked == true) setIsLiked(false);
   };
+  useEffect(() => {
+    setSideIsOpen(false)
+  },[])
 
   return (
     <div>
